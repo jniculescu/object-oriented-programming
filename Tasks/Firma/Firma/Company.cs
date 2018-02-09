@@ -8,11 +8,11 @@ namespace Firma
 {
     class Company
     {
-        private string _title;
-        private string _address;
-        private int _phone;
-        private int _income;
-        private int _expenses;
+        public string _title;
+        public string _address;
+        public int _phone;
+        public int _income;
+        public int _expenses;
 
         public Company()
         {
