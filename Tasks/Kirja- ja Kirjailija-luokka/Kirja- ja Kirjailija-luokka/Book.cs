@@ -50,7 +50,7 @@ namespace Kirja__ja_Kirjailija_luokka
 
         public void SearchBook(string Name)
         {
-            Console.WriteLine("Give my book a name: ");
+            Console.WriteLine("Give the book a name: ");
             string bookname = Console.ReadLine();
 
             name = bookname;
