@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BankUtils
+namespace BBANcheck
 {
     class BankUtils
     {
         public static bool NumberCheck(ref string bban)
         {
             // remove white space and dash
-            bban.Replace(" ", "");
-            bban.Replace("-", "");
+            bban = bban.Replace(" ", "");
+            bban = bban.Replace("-", "");
 
             //chec for other than numbers
             for (int i = 0; i < bban.Length; i++)

@@ -6,31 +6,29 @@ namespace BBANcheck
 {
     class BBAN
     {
-        public string number { get; set; }
-        public bool transformedNumber { get; set; }
-        public string newNumber { get; set; }
-
+        public string accnumber { get; set; }
+        public bool isValidAccNumber { get; set; }
+        public string transformedNumber { get; set; }
 
         public BBAN(string bban)
         {
-            number = bban;
-            string tempNum = number;
-            transformedNumber = BankUtils.BankUtils.NumberCheck(ref tempNum);
-            newNumber = tempNum;
+            accnumber = bban;
+            string tempNum = accnumber;
+            isValidAccNumber = BankUtils.NumberCheck(ref tempNum);
+            transformedNumber = tempNum;
         }
 
         public bool IsValid()
         {
-            return BankUtils.BankUtils.ValidNumber(number);
+            return BankUtils.ValidNumber(accnumber);
         }
 
         public override string ToString()
         {
-            return $"BBAN: {number}\n" +
-                   $"MachineNumber: {newNumber}\n" +
-                   $"IsValid: {transformedNumber}\n" +
+            return $"BBAN: {accnumber}\n" +
+                   $"MachineNumber: {transformedNumber}\n" +
+                   $"IsValid: {isValidAccNumber}\n" +
                    $"___________________________\n";
-
         }
       }
     }
