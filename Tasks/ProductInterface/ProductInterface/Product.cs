@@ -31,9 +31,7 @@ namespace ProductInterface
 
         public string GetProduct(Product prod)
         {
-            Console.WriteLine("Search Product: ");
-            string searchParameter = Console.ReadLine();
-            name = searchParameter;
+            string name = prod.name;
 
             if(name == prod.name)
             {
